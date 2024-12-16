@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import './App.css'
+import AddDrink from './components/AddDrink';
 
 
 export interface Potion {
@@ -35,7 +36,7 @@ export default function App() {
   
   return (
     <>
-        <h1>Get Data</h1>
+        <h1>Get Data From STRAPI</h1>
         <h2>Potions</h2>
       <div className="potions">
         {data?.map((potion) => (
@@ -45,7 +46,7 @@ export default function App() {
           </div>
         ))}
       </div>
-        
+      <AddDrink/>
     </>
   )
 }
