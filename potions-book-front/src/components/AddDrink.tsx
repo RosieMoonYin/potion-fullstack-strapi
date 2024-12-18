@@ -46,16 +46,19 @@ export default function AddDrink() {
     const NewProduct = "Drink";
 
     return (
-        <section>
-                <h1>Inventory:</h1>
+        <section className="m-10">
+                <h1 className="p-4 text-lg">Inventory:</h1>
                 {data?.map((drink) => (
-                    <div key={drink.EAN_Code} className="Section"> 
-                        <p>
+                    <div key={drink.EAN_Code} className="Section flex justify-center border-stone-500 m-4 p-2 w-96"> 
+                        <div>
                             <img src={drink.Image_Url} width={120}/>
-                        </p>
-                        <h3 className="text-white">{drink.Name}</h3>
-                        <p className="text">EAN code: {drink.EAN_Code}</p>
-                        <p>Brand: {drink.Brand}</p>
+                        </div>
+                        <div className="flex-column text-left mb-20 p-4">
+                            <h3 className="font-bold underline">{drink.Name}</h3>
+                            <p className="">EAN code: {drink.EAN_Code}</p>
+                            <p>Brand: {drink.Brand}</p>
+                        </div>
+                        
                     </div>
                 ))}
             <div>

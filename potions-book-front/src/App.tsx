@@ -36,6 +36,7 @@ export default function App() {
   
   return (
     <>
+    <AddDrink/>
         <h1>Get Data From STRAPI</h1>
         <h2>Potions</h2>
       <div className="potions">
@@ -46,7 +47,7 @@ export default function App() {
           </div>
         ))}
       </div>
-      <AddDrink/>
+      
     </>
   )
 }
